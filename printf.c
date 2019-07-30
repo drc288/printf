@@ -3,7 +3,7 @@
 int _printf(const char *format, ...)
 {
 	va_list valist;
-	int i = 0, num;
+	int i = 0, num, counter = 0;
 	char * str, c;
 
 	va_start(valist, format);
@@ -19,20 +19,24 @@ int _printf(const char *format, ...)
 						num = va_arg(valist, int);
 						print_number(num);
 						i = i + 2;
+						counter += digit(num);
 						break;
 					case 'c':
 						c = va_arg(valist, int);
 						_putchar (c);
 						i = i + 2;
+						counter += 1;
 						break;
 					case 's':
 						str = va_arg(valist, char*);
 						write(1, str, length(str));
 						i = i + 2;
+						counter += length(str);
 						break;
 					case '%':
 						_putchar('%');
 						i = i + 2;
+						counter += 1;
 						break;
 					default:
 						if (format[i + 1] == '\0')
@@ -47,8 +51,9 @@ int _printf(const char *format, ...)
 			{
 				_putchar(format[i]);
 				i++;
+				counter++;
 			};
 		};
 	va_end(valist);
-	return (0);
+	return (counter);
 }
