@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 						c = va_arg(valist, int);
 						_putchar (c);
 						i = i + 2;
-						counter += 2;
+						counter += 1;
 						break;
 					case 's':
 						str = va_arg(valist, char*);
