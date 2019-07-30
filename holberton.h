@@ -9,7 +9,6 @@
 int _printf(const char *format, ...);
 
 /* OTHER */
-int getSwitch(int *i, const char * format, va_list valist);
 int length(char *str);
 void print_number(int n);
 int _putchar(char c);
