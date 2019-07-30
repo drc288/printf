@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 						}
 						write(1, str, length(str));
 						i = i + 2;
-						counter += length(str) + 1; 
+						counter += length(str);
 						break;
 					case '%':
 						_putchar('%');
@@ -60,10 +60,12 @@ int _printf(const char *format, ...)
 						{
 							_putchar(10);
 							return (-1);
-						} else if ((format [i + 1] < 65) || (format[i + 1] > 90
-								&& format[i + 1] < 97) || (format[i + 1] > 122))
+						}
+						else if ((format [i + 1] < 65) || (format[i + 1] > 90
+								&& format[i + 1] < 97) || (format[i + 1] < 123))
 						{
 							_putchar('%');
+							counter += 1;
 							i = i + 1;
 							break;
 						}
