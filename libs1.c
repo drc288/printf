@@ -59,6 +59,27 @@ int digit(int n)
 }
 
 /**
+ * negDigit - get the number to digit
+ * @n: the digit
+ *
+ * Return: the numbers of digits
+ */
+
+int negDigit(int n)
+{
+        int result;
+
+        if ((n / 10) > -1)
+        {
+                return (1);
+        };
+
+        result = 1 + negDigit(n / 10);
+
+        return (result);
+}
+
+/**
  * length - print the length of the string
  * @str: string
  *

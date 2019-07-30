@@ -26,10 +26,10 @@ int _printf(const char *format, ...)
 						print_number(num);
 						if (num < 0)
 						{
-							counter += digit(num * (- 1)) + 1;
+							counter += negDigit(num) + 1;
 						} else
 						{
-							counter += digit(num) + 1;
+							counter += digit(num);
 						}
 						i = i + 2;
 						break;
