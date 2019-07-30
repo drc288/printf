@@ -24,7 +24,13 @@ int _printf(const char *format, ...)
 					case 'i':
 						num = va_arg(valist, int);
 						print_number(num);
-						counter += digit(num) + 1;
+						if (num < 0)
+						{
+							counter += digit(num * (- 1)) + 1;
+						} else
+						{
+							counter += digit(num) + 1;
+						}
 						i = i + 2;
 						break;
 					case 'c':
