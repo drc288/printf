@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 						num = va_arg(valist, int);
 						print_number(num);
 						counter += digit(num) + 1;
-						i = i + 1;
+						i = i + 2;
 						break;
 					case 'c':
 						c = va_arg(valist, int);
