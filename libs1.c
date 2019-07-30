@@ -48,7 +48,7 @@ int digit(int n)
 {
 	int result;
 
-	if ((n /10) < 1)
+	if ((n / 10) < 1)
 	{
 		return (1);
 	};
@@ -70,7 +70,7 @@ int length(char *str)
 	int i = 0;
 
 	while (str[i] != '\0')
-	{	
+	{
 		i++;
 	};
 
