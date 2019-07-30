@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 int _printf(const char *format, ...)
 {
@@ -8,7 +9,12 @@ int _printf(const char *format, ...)
 
 	va_start(valist, format);
 
-	while (format[i] != '\0')
+	if (format == NULL)
+	{
+		return (-1);
+	}
+
+	while (format[i] != '\0' && format != NULL)
 		{
 			if (format[i] == '%')
 			{
@@ -29,6 +35,11 @@ int _printf(const char *format, ...)
 						break;
 					case 's':
 						str = va_arg(valist, char*);
+						if (str == NULL)
+						{
+							write(1,"(null)",6);
+							return (6);
+						}
 						write(1, str, length(str));
 						i = i + 2;
 						counter += length(str) + 1; 
@@ -43,17 +54,24 @@ int _printf(const char *format, ...)
 						{
 							_putchar(10);
 							return (-1);
+						} else if ((format [i + 1] < 65) || (format[i + 1] > 90
+								&& format[i + 1] < 97) || (format[i + 1] > 122))
+						{
+							_putchar('%');
+							i = i + 1;
+							break;
 						}
-						return (-1);
+						i = i + 2;
 				};
 			};
-			if (format[i] != '\0')
+			if (format[i] != '\0' && format[i] != '%')
 			{
 				_putchar(format[i]);
 				i++;
 				counter++;
 			};
 		};
+
 	va_end(valist);
 	return (counter);
 }
