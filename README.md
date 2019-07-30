@@ -27,6 +27,14 @@ Recreate the printf() command with most of its functionalities
 * Example %c:
 
 ```c
+#include "holberton.h"
+
+/**
+ * main - main function
+ *
+ * Return: 0 to success
+ */
+
 int main(void)
 {
 	char c;
@@ -42,6 +50,14 @@ Output: "Hello Word"
 * Example %d:
 
 ```c
+#include "holberton.h"
+
+/**
+ * main - main function
+ *
+ * Return: 0 to success
+ */
+
 int main (void)
 {
 	int num;
@@ -55,6 +71,14 @@ int main (void)
 Output: "The number is: -1024"
 
 * Example %i:
+```c
+#include "holberton.h"
+
+/**
+ * main - main function
+ *
+ * Return: 0 to success
+ */
 
 int main(void)
 {
@@ -64,5 +88,6 @@ int main(void)
 	_printf("Index: %i", index);
 	return (0);
 }
+```
 
 Outout: "Index: 50"
