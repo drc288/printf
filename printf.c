@@ -63,7 +63,9 @@ int _printf(const char *format, ...)
 						if (str == NULL)
 						{
 							write(1,"(null)",6);
-							return (6);
+							counter += 6;
+							i = i + 2;
+							break;
 						}
 						write(1, str, length(str));
 						i = i + 2;
