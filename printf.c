@@ -79,7 +79,6 @@ int _printf(const char *format, ...)
 					default:
 						if (format[i + 1] == '\0')
 						{
-							_putchar(10);
 							return (-1);
 						}
 						else if ((format [i + 1] < 65) || (format[i + 1] > 90
