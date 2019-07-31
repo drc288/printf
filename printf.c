@@ -1,5 +1,25 @@
 #include "holberton.h"
 
+/**
+ * negDigit - get the number to digit
+ * @n: the digit
+ *
+ * Return: the numbers of digits
+ */
+
+int negative(int n)
+{
+	int result;
+
+	if ((n / 10) > -1)
+	{
+		return (1);
+	};
+
+	result = 1 + negative(n / 10);
+	return (result);
+}
+
 int _printf(const char *format, ...)
 {
 	va_list valist;
@@ -25,7 +45,7 @@ int _printf(const char *format, ...)
 						print_number(num);
 						if (num < 0)
 						{
-							counter += negDigit(num) + 1;
+							counter += negative(num) + 1;
 						} else
 						{
 							counter += digit(num);
