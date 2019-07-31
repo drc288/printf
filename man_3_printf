@@ -1,7 +1,6 @@
-.TH printf 1 "30 Jul 2019" "0.1" "printf man page"
+.TH printf 3 "30 Jul 2019" "0.1" "printf man page"
 .SH NAME
 _printf
-- become a full-stack software engineer.
 .SH SYNOPSIS
 _printf("string %option", variable)
 .SH DESCRIPTION

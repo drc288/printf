@@ -12,14 +12,8 @@ Recreate the printf() command with most of its functionalities
 
 * %c: print a singlecharacter
 * %d: print adecimal (base 10) number
-* %e: print anexponential floating-point number
-* %f: print afloating-point number
-* %g: print ageneral-format floating-point number
 * %i: print aninteger in base 10
-* %o: print a number inoctal (base 8)
 * %s: print astring of characters
-* %u: print anunsigned decimal (base 10) number
-* %x: print a number in hexidecimal (base 16)
 * %%: print a percent sign (\%also works)
 
 ## Syntax
